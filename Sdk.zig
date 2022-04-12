@@ -81,9 +81,9 @@ pub fn init(b: *Builder, user_config: ?UserConfig, versions: ToolchainVersions) 
 }
 
 pub const ToolchainVersions = struct {
-    android_sdk_version: u16 = 28,
-    build_tools_version: []const u8 = "28.0.3",
-    ndk_version: []const u8 = "21.1.6352462",
+    android_sdk_version: u16 = 29,
+    build_tools_version: []const u8 = "29.0.3",
+    ndk_version: []const u8 = "21.4.7075529",
 
     pub fn androidSdkString(self: ToolchainVersions, buf: *[5]u8) []u8 {
         return std.fmt.bufPrint(buf, "{d}", .{self.android_sdk_version}) catch unreachable;
